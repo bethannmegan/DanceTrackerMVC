@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanceTrackerMVC", "DanceTrackerMVC\DanceTrackerMVC.csproj", "{915890D0-BCC2-4E06-82C0-AA7A46AD3333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanceTrackerDataAccess", "DanceTrackerDataAccess\DanceTrackerDataAccess.csproj", "{87924ACC-802F-4591-BFC6-CC9EC3AE818B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{915890D0-BCC2-4E06-82C0-AA7A46AD3333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915890D0-BCC2-4E06-82C0-AA7A46AD3333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915890D0-BCC2-4E06-82C0-AA7A46AD3333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915890D0-BCC2-4E06-82C0-AA7A46AD3333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87924ACC-802F-4591-BFC6-CC9EC3AE818B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87924ACC-802F-4591-BFC6-CC9EC3AE818B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87924ACC-802F-4591-BFC6-CC9EC3AE818B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87924ACC-802F-4591-BFC6-CC9EC3AE818B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C53B6FB0-10CC-4EE9-9CC4-5EAF263A1D85}
+	EndGlobalSection
+EndGlobal
