@@ -33,7 +33,6 @@ namespace DanceTrackerDataAccess.Context
                     entity.Property(e => e.Competitions);
                     entity.Property(e => e.LessonsAndWorkshops);
                 }
-                
                 );
         }
     }
