@@ -1,0 +1,55 @@
+﻿@model EventsViewModel
+@using DanceTrackerDataAccess.Models
+
+@{
+    string pageType = Model.CurrentEvent.EventId > 0 ? "Update Event" : "Create Event";
+
+    ViewData["Title"] = $"Dance Tracker | {pageType}";
+}
+
+<form action="~/Events/Index" method="post">
+    <div>
+        <div class="row">
+            <div class="col-6 offset-3 text-center">
+                <h1 class="display-4" style="margin: 20px 0px;">@pageType</h1>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Event Date </label>
+                <input type="text" class="form-control" name="eventDate" value="@Model.CurrentEvent.EventDate" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Event Name</label>
+                <input type="text" class="form-control" name="eventName" value="@Model.CurrentEvent.EventName" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Event Location</label>
+                <input type="text" class="form-control" name="eventLocation" value="@Model.CurrentEvent.EventLocation" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Competitions</label>
+                <input type="text" class="form-control" name="competitions" value="@Model.CurrentEvent.Competitions" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Lessons and Workshops</label>
+                <input type="text" class="form-control" name="lessonsAndWorkshops" value="@Model.CurrentEvent.LessonsAndWorkshops" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3">
+                <button type="button" class="btn btn-secondary" onclick="location.href = '/Events/Index'">CANCEL</button>
+                <button type="submit" class="btn btn-primary">SAVE EVENT</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="eventId" value="@Model.CurrentEvent.EventId" />
+</form>

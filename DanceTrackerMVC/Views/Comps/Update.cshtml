@@ -1,0 +1,67 @@
+﻿@model CompsViewModel
+@using DanceTrackerDataAccess.Models
+
+@{
+    string pageType = Model.CurrentComp.EventId > 0 ? "Update Comp" : "Create Comp";
+
+    ViewData["Title"] = $"Dance Tracker | {pageType}";
+}
+
+<form action="~/Comps/Index" method="post">
+    <div>
+        <div class="row">
+            <div class="col-6 offset-3 text-center">
+                <h1 class="display-4" style="margin: 20px 0px;">@pageType</h1>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Event Date</label>
+                <input type="text" class="form-control" name="eventDate" value="@Model.CurrentComp.EventDate" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Event Name</label>
+                <input type="text" class="form-control" name="eventName" value="@Model.CurrentComp.EventName" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Competitions</label>
+                <input type="text" class="form-control" name="competitions" value="@Model.CurrentComp.Competitions" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Division</label>
+                <input type="text" class="form-control" name="division" value="@Model.CurrentComp.Division" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Dance Partners</label>
+                <input type="text" class="form-control" name="dancePartners" value="@Model.CurrentComp.DancePartners" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Results</label>
+                <input type="text" class="form-control" name="results" value="@Model.CurrentComp.Results" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3 form-group">
+                <label>Videos</label>
+                <input type="text" class="form-control" name="videos" value="@Model.CurrentComp.Videos" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 offset-md-3">
+                <button type="button" class="btn btn-secondary" onclick="location.href = '/Comps/Index'">CANCEL</button>
+                <button type="submit" class="btn btn-primary">SAVE COMP</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="eventId" value="@Model.CurrentComp.EventId" />
+</form>

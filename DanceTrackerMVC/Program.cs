@@ -1,7 +1,13 @@
+using DanceTrackerDataAccess.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<DanceTrackerContextDB>(item =>
+                item.UseSqlServer(builder.Configuration.GetConnectionString("DanceData")));
 
 var app = builder.Build();
 
@@ -25,3 +31,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
